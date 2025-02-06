@@ -6,17 +6,44 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		7C5BD4502D53E75200364651 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C5BD4482D53E75200364651 /* Preview Assets.xcassets */; };
+		7C5BD4512D53E75200364651 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C5BD44A2D53E75200364651 /* Assets.xcassets */; };
+		7C5BD4522D53E75200364651 /* CardsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5BD44B2D53E75200364651 /* CardsListView.swift */; };
+		7C5BD4532D53E75200364651 /* CardThumbnail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5BD44C2D53E75200364651 /* CardThumbnail.swift */; };
+		7C5BD4542D53E75200364651 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5BD44D2D53E75200364651 /* ContentView.swift */; };
+		7C5BD4552D53E75200364651 /* iOSApp2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5BD44E2D53E75200364651 /* iOSApp2App.swift */; };
+		7C5BD4592D53E78D00364651 /* CardDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5BD4582D53E78D00364651 /* CardDetailView.swift */; };
+		7C5BD45B2D53E7BD00364651 /* CardElementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5BD45A2D53E7BC00364651 /* CardElementView.swift */; };
+		7C5BD45D2D53E7F700364651 /* SingleCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5BD45C2D53E7F700364651 /* SingleCardView.swift */; };
+		7C5BD4652D53E8A900364651 /* CardStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5BD4642D53E8A900364651 /* CardStore.swift */; };
+		7C5BD4672D53E8F000364651 /* PreviewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5BD4662D53E8F000364651 /* PreviewData.swift */; };
+		7C5BD4692D53E95300364651 /* CardElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5BD4682D53E95300364651 /* CardElement.swift */; };
+		7C5BD46B2D53E98800364651 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5BD46A2D53E98800364651 /* Card.swift */; };
+		7C5BD46E2D53EA6600364651 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5BD46D2D53EA6600364651 /* Settings.swift */; };
+		7C5BD4722D54F51700364651 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5BD4712D54F51700364651 /* WelcomeView.swift */; };
+		7C5BD4742D55009700364651 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5BD4732D55009700364651 /* HeaderView.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		7C5BD4312D53E5E400364651 /* iOSApp2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSApp2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C5BD4482D53E75200364651 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7C5BD44A2D53E75200364651 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7C5BD44B2D53E75200364651 /* CardsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsListView.swift; sourceTree = "<group>"; };
+		7C5BD44C2D53E75200364651 /* CardThumbnail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardThumbnail.swift; sourceTree = "<group>"; };
+		7C5BD44D2D53E75200364651 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		7C5BD44E2D53E75200364651 /* iOSApp2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSApp2App.swift; sourceTree = "<group>"; };
+		7C5BD4582D53E78D00364651 /* CardDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailView.swift; sourceTree = "<group>"; };
+		7C5BD45A2D53E7BC00364651 /* CardElementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardElementView.swift; sourceTree = "<group>"; };
+		7C5BD45C2D53E7F700364651 /* SingleCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleCardView.swift; sourceTree = "<group>"; };
+		7C5BD4642D53E8A900364651 /* CardStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardStore.swift; sourceTree = "<group>"; };
+		7C5BD4662D53E8F000364651 /* PreviewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewData.swift; sourceTree = "<group>"; };
+		7C5BD4682D53E95300364651 /* CardElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardElement.swift; sourceTree = "<group>"; };
+		7C5BD46A2D53E98800364651 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		7C5BD46D2D53EA6600364651 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		7C5BD4712D54F51700364651 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		7C5BD4732D55009700364651 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		7C5BD4332D53E5E400364651 /* iOSApp2 */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = iOSApp2;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		7C5BD42E2D53E5E400364651 /* Frameworks */ = {
@@ -32,7 +59,7 @@
 		7C5BD4282D53E5E400364651 = {
 			isa = PBXGroup;
 			children = (
-				7C5BD4332D53E5E400364651 /* iOSApp2 */,
+				7C5BD44F2D53E75200364651 /* iOSApp2 */,
 				7C5BD4322D53E5E400364651 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +70,69 @@
 				7C5BD4312D53E5E400364651 /* iOSApp2.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		7C5BD4492D53E75200364651 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				7C5BD4482D53E75200364651 /* Preview Assets.xcassets */,
+				7C5BD4662D53E8F000364651 /* PreviewData.swift */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		7C5BD44F2D53E75200364651 /* iOSApp2 */ = {
+			isa = PBXGroup;
+			children = (
+				7C5BD46C2D53EA5200364651 /* Config */,
+				7C5BD4632D53E87F00364651 /* Model */,
+				7C5BD4492D53E75200364651 /* Preview Content */,
+				7C5BD44A2D53E75200364651 /* Assets.xcassets */,
+				7C5BD4562D53E75800364651 /* Views */,
+				7C5BD44E2D53E75200364651 /* iOSApp2App.swift */,
+			);
+			path = iOSApp2;
+			sourceTree = "<group>";
+		};
+		7C5BD4562D53E75800364651 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7C5BD4572D53E76600364651 /* Single Card Views */,
+				7C5BD44B2D53E75200364651 /* CardsListView.swift */,
+				7C5BD44C2D53E75200364651 /* CardThumbnail.swift */,
+				7C5BD44D2D53E75200364651 /* ContentView.swift */,
+				7C5BD4712D54F51700364651 /* WelcomeView.swift */,
+				7C5BD4732D55009700364651 /* HeaderView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7C5BD4572D53E76600364651 /* Single Card Views */ = {
+			isa = PBXGroup;
+			children = (
+				7C5BD4582D53E78D00364651 /* CardDetailView.swift */,
+				7C5BD45A2D53E7BC00364651 /* CardElementView.swift */,
+				7C5BD45C2D53E7F700364651 /* SingleCardView.swift */,
+			);
+			path = "Single Card Views";
+			sourceTree = "<group>";
+		};
+		7C5BD4632D53E87F00364651 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7C5BD4642D53E8A900364651 /* CardStore.swift */,
+				7C5BD4682D53E95300364651 /* CardElement.swift */,
+				7C5BD46A2D53E98800364651 /* Card.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7C5BD46C2D53EA5200364651 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				7C5BD46D2D53EA6600364651 /* Settings.swift */,
+			);
+			path = Config;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -59,9 +149,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				7C5BD4332D53E5E400364651 /* iOSApp2 */,
 			);
 			name = iOSApp2;
 			packageProductDependencies = (
@@ -109,6 +196,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C5BD4502D53E75200364651 /* Preview Assets.xcassets in Resources */,
+				7C5BD4512D53E75200364651 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +208,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C5BD4692D53E95300364651 /* CardElement.swift in Sources */,
+				7C5BD4522D53E75200364651 /* CardsListView.swift in Sources */,
+				7C5BD4652D53E8A900364651 /* CardStore.swift in Sources */,
+				7C5BD46E2D53EA6600364651 /* Settings.swift in Sources */,
+				7C5BD46B2D53E98800364651 /* Card.swift in Sources */,
+				7C5BD4672D53E8F000364651 /* PreviewData.swift in Sources */,
+				7C5BD45D2D53E7F700364651 /* SingleCardView.swift in Sources */,
+				7C5BD4532D53E75200364651 /* CardThumbnail.swift in Sources */,
+				7C5BD4592D53E78D00364651 /* CardDetailView.swift in Sources */,
+				7C5BD4722D54F51700364651 /* WelcomeView.swift in Sources */,
+				7C5BD45B2D53E7BD00364651 /* CardElementView.swift in Sources */,
+				7C5BD4542D53E75200364651 /* ContentView.swift in Sources */,
+				7C5BD4552D53E75200364651 /* iOSApp2App.swift in Sources */,
+				7C5BD4742D55009700364651 /* HeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
