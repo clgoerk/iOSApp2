@@ -14,78 +14,90 @@ struct PhotoSelectionView: View {
   @State private var selectedImage: UIImage? = nil
   @State private var showCamera = false
   @EnvironmentObject var store: CardStore
+  @Environment(\.dismiss) private var dismiss
   
   var imageFileName: String {
     return "card\(card.id).jpg"
   }
   
   var body: some View {
-    ZStack {
-      Image("ListImage")
-        .resizable()
-        .scaledToFill()
-        .ignoresSafeArea()
-      
-      VStack {
-        if let image = selectedImage {
-          Image(uiImage: image)
-            .resizable()
-            .scaledToFit()
-            .frame(width: 350, height: 300)
-            .clipShape(RoundedRectangle(cornerRadius: 30))
-          
-          Button("Remove Photo") {
-            selectedImage = nil
-            selectedItem = nil
-            deleteImageFromStorage()
-          }
-          .frame(width: 200, height: 50)
-          .foregroundColor(.red)
-          .background(Color.black)
-          .cornerRadius(10)
-          
-        } else {
-          Text("No Image Selected")
-            .font(.title)
-            .foregroundColor(.white)
-        }
+    NavigationStack {
+      ZStack {
+        Image("ListImage")
+          .resizable()
+          .scaledToFill()
+          .ignoresSafeArea()
         
-        VStack(spacing: 10) {
-          PhotosPicker("Select from Gallery", selection: $selectedItem, matching: .images)
+        VStack {
+          if let image = selectedImage {
+            Image(uiImage: image)
+              .resizable()
+              .scaledToFit()
+              .frame(width: 350, height: 300)
+              .clipShape(RoundedRectangle(cornerRadius: 30))
+            
+            Button("Remove Photo") {
+              selectedImage = nil
+              selectedItem = nil
+              deleteImageFromStorage()
+            }
             .frame(width: 200, height: 50)
             .foregroundColor(.white)
             .background(Color.black)
             .cornerRadius(10)
+            
+          } else {
+            Text("No Image Selected")
+              .font(.title)
+              .foregroundColor(.white)
+          }
           
-          Button("Take a Photo") {
-            showCamera = true
+          VStack(spacing: 10) {
+            PhotosPicker("Select from Gallery", selection: $selectedItem, matching: .images)
+              .frame(width: 200, height: 50)
+              .foregroundColor(.white)
+              .background(Color.black)
+              .cornerRadius(10)
+            
+            Button("Take a Photo") {
+              showCamera = true
+            }
+            .frame(width: 200, height: 50)
+            .foregroundColor(.white)
+            .background(Color.black)
+            .cornerRadius(10)
+            .disabled(!CameraView.supportsCamera)
           }
-          .frame(width: 200, height: 50)
+          .padding()
+        }
+      }
+      .onChange(of: selectedItem) { _, newItem in
+        Task {
+          if let newItem {
+            if let data = try? await newItem.loadTransferable(type: Data.self),
+               let image = UIImage(data: data) {
+              selectedImage = image
+              saveImageToStorage(image)
+            }
+          }
+        }
+      }
+      .sheet(isPresented: $showCamera) {
+        CameraView(image: $selectedImage, onImageCaptured: saveImageToStorage)
+      }
+      .onAppear {
+        loadImageFromStorage()
+      }
+      .toolbar {
+        ToolbarItem(placement: .topBarTrailing) {
+          Button("Done") {
+            dismiss()
+          }
           .foregroundColor(.white)
-          .background(Color.black)
-          .cornerRadius(10)
-          .disabled(!CameraView.supportsCamera)
-        }
-        .padding()
-      }
-    }
-    .onChange(of: selectedItem) { _, newItem in
-      Task {
-        if let newItem {
-          if let data = try? await newItem.loadTransferable(type: Data.self),
-             let image = UIImage(data: data) {
-            selectedImage = image
-            saveImageToStorage(image)
-          }
+          .fontWeight(.bold)
         }
       }
-    }
-    .sheet(isPresented: $showCamera) {
-      CameraView(image: $selectedImage, onImageCaptured: saveImageToStorage)
-    }
-    .onAppear {
-      loadImageFromStorage()
-    }
+    } // NavigationStack
   } // body
   
   /// **Save Image to Local Storage**
