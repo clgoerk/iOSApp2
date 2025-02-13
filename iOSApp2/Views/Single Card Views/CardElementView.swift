@@ -13,8 +13,9 @@ struct CardElementView: View {
   var body: some View {
     if let element = element as? ImageElement {
       ImageElementView(element: element)
-    }
-    if let element = element as? TextElement {
+    } else if let element = element as? SelectedImageElement {
+      SelectedImageElementView(element: element)
+    } else if let element = element as? TextElement {
       TextElementView(element: element)
     }
   }
@@ -30,6 +31,17 @@ struct ImageElementView: View {
   }
 } // ImageElementView
 
+struct SelectedImageElementView: View {
+  let element: SelectedImageElement
+
+  var body: some View {
+    Image(element.imagePath)
+        .resizable()
+        .scaledToFill()
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+    }
+  } // SelectedImageElementView
+
 struct TextElementView: View {
   let element: TextElement
 
@@ -44,9 +56,11 @@ struct TextElementView: View {
         .multilineTextAlignment(.center)
         .padding(8)
     }
-    .padding([.leading, .trailing], 10) 
+    .padding([.leading, .trailing], 10)
     .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
     .fixedSize(horizontal: false, vertical: true)
   }
 } // TextElementView
+
+
 

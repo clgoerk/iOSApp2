@@ -18,10 +18,23 @@ extension CardElement {
 } // CardElement extension
 
 struct ImageElement: CardElement {
-  let id = UUID()
-  var image: Image
+  var id = UUID()
+  var imageName: String
+
+  var image: Image {
+    Image(imageName)
+  }
 } // ImageElement
- 
+
+struct SelectedImageElement: CardElement {
+  var id = UUID()
+  var imagePath: String
+  
+  var uiImage: UIImage? {
+    UIImage(contentsOfFile: imagePath)
+  }
+} // SelectedImageElement
+
 struct TextElement: CardElement {
   let id = UUID()
   var text = ""

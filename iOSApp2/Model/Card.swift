@@ -8,7 +8,14 @@
 import SwiftUI
 
 struct Card: Identifiable {
-  let id = UUID()
-  var backgroundColor: Color = .yellow
+  let id: UUID
+  var backgroundColor: Color = .white
   var elements: [CardElement] = []
+  var imagePath: String?
+
+  var selectedImage: UIImage? {
+    guard let imagePath else { return nil }
+    let url = URL(fileURLWithPath: imagePath)
+    return UIImage(contentsOfFile: url.path)
+  }
 } // Card

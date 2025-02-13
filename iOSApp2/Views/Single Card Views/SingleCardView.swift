@@ -22,7 +22,7 @@ struct SingleCardView: View {
             }
           }
         }
-    } // Nav
+    } 
   } // body
 } // SingleCardView
 

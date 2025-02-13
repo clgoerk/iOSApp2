@@ -23,6 +23,8 @@
 		7C5BD46E2D53EA6600364651 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5BD46D2D53EA6600364651 /* Settings.swift */; };
 		7C5BD4722D54F51700364651 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5BD4712D54F51700364651 /* WelcomeView.swift */; };
 		7C5BD4742D55009700364651 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5BD4732D55009700364651 /* HeaderView.swift */; };
+		7CB5DB142D5CECE40002AAF1 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB5DB132D5CECE40002AAF1 /* CameraView.swift */; };
+		7CB5DB162D5CED1E0002AAF1 /* PhotoSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB5DB152D5CED1E0002AAF1 /* PhotoSelectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +45,8 @@
 		7C5BD46D2D53EA6600364651 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		7C5BD4712D54F51700364651 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		7C5BD4732D55009700364651 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		7CB5DB132D5CECE40002AAF1 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		7CB5DB152D5CED1E0002AAF1 /* PhotoSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSelectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,8 @@
 				7C5BD44D2D53E75200364651 /* ContentView.swift */,
 				7C5BD4712D54F51700364651 /* WelcomeView.swift */,
 				7C5BD4732D55009700364651 /* HeaderView.swift */,
+				7CB5DB132D5CECE40002AAF1 /* CameraView.swift */,
+				7CB5DB152D5CED1E0002AAF1 /* PhotoSelectionView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -211,6 +217,7 @@
 				7C5BD4692D53E95300364651 /* CardElement.swift in Sources */,
 				7C5BD4522D53E75200364651 /* CardsListView.swift in Sources */,
 				7C5BD4652D53E8A900364651 /* CardStore.swift in Sources */,
+				7CB5DB142D5CECE40002AAF1 /* CameraView.swift in Sources */,
 				7C5BD46E2D53EA6600364651 /* Settings.swift in Sources */,
 				7C5BD46B2D53E98800364651 /* Card.swift in Sources */,
 				7C5BD4672D53E8F000364651 /* PreviewData.swift in Sources */,
@@ -221,6 +228,7 @@
 				7C5BD45B2D53E7BD00364651 /* CardElementView.swift in Sources */,
 				7C5BD4542D53E75200364651 /* ContentView.swift in Sources */,
 				7C5BD4552D53E75200364651 /* iOSApp2App.swift in Sources */,
+				7CB5DB162D5CED1E0002AAF1 /* PhotoSelectionView.swift in Sources */,
 				7C5BD4742D55009700364651 /* HeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
